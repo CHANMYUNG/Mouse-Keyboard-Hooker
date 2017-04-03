@@ -13,6 +13,7 @@ namespace getCoordinate
         // Mouse Click Event Handler
         public static event EventHandler<MouseClickedEventArgs> MouseClicked;
 
+
         // Start hooking
         public void Start() 
         {
@@ -97,6 +98,27 @@ namespace getCoordinate
     {
         public int x;
         public int y;
+        
+        public override string ToString()
+        {
+            return $"({x},{y})";
+        }
+
+        public override bool Equals(object obj)
+        {
+
+            if (x == ((POINT)obj).x && y == ((POINT)obj).y) return true;
+            return false;
+        }
+
+        public static bool IsAddable(POINT pt, List<POINT> pointList)
+        {
+            foreach (POINT p in pointList)
+            {
+                if (p.Equals(pt)) return false;
+            }
+            return true;
+        }
     }
 
     [StructLayout(LayoutKind.Sequential)]

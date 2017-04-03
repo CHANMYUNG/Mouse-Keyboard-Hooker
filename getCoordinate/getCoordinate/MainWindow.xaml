@@ -8,7 +8,9 @@
         Title="MainWindow" Height="350" Width="525"
         >
     <Grid x:Name="root">
-        <TextBox x:Name="XYbox" HorizontalAlignment="Left" Height="106" Margin="67,122,0,92.8" TextWrapping="Wrap" Text="(X,Y)" VerticalAlignment="Center" Width="401" FontSize="50" HorizontalContentAlignment="Center" IsReadOnly="True" />
+        <Label x:Name="XYLabel" HorizontalAlignment="Left" Height="52" Margin="263,122,0,146.8" Content="(X,Y)" VerticalAlignment="Center" Width="205" FontSize="35" HorizontalContentAlignment="Center" />
+        <Label  HorizontalAlignment="Left" Margin="172,122,0,146.8" VerticalAlignment="Center" Height="52" Width="86" FontSize="35" Content="(X,Y): " HorizontalContentAlignment="Center"/>
+        <ListBox x:Name="PointListBox" HorizontalAlignment="Left" Height="301" VerticalAlignment="Top" Width="118" Margin="0,10,0,0" />
 
     </Grid>
 </Window>
